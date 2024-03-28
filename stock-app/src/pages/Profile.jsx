@@ -21,7 +21,7 @@ import {
   import VisibilityIcon from "@mui/icons-material/Visibility";
   import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
   import { changePassword } from "../store/auth";
-  import { useDispatch } from "react-redux";
+  import { useDispatch,useSelector  } from "react-redux";
   
   const Profile = () => {
     const [showOldPassword, setOldShowPassword] = useState(false);
@@ -39,7 +39,7 @@ import {
     const email = sessionStorage.getItem("email");
     const first_name = sessionStorage.getItem("first_name");
     const last_name = sessionStorage.getItem("last_name");
-  
+  console.log("Email",email)
     const proifleSchema = yup.object().shape({
       new_password1: yup
         .string()
@@ -89,9 +89,10 @@ import {
       actions.resetForm();
     };
   
+    const sidebarOpen = useSelector((state) => state.ui.sidebarOpen);
     return (
       <Box p={5}>
-        <Typography variant="h5" component="h1" color="inherit" noWrap>
+        <Typography variant="h5" component="h1" color="inherit" noWrap style={{ marginLeft: sidebarOpen ? '15rem' : '5rem' }}>
           Profile
         </Typography>
   

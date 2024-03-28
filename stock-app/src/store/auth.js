@@ -79,7 +79,7 @@ export const register = (userInfo, navigate) =>{
         // we are using setItem to use this user information in different page
         sessionStorage.setItem("token", res.data.token);
         sessionStorage.setItem("username", res.data.username);
-        sessionStorage.setItem("fisrst_name", res.data.first_name);
+        sessionStorage.setItem("first_name", res.data.first_name);
         sessionStorage.setItem("last_name", res.data.last_name);
         sessionStorage.setItem("email", res.data.email);
         toast.success("Registration sucessesful!!")
@@ -111,7 +111,7 @@ export const login = (userInfo, navigate)=>{
               dispatch(authSlice.actions.auth(payload))
               sessionStorage.setItem("token", res.data.key)
               sessionStorage.setItem("username" , res.data.username)
-              sessionStorage.setItem("fisr_name" , res.data.user.fisrt_name)
+              sessionStorage.setItem("first_name" , res.data.user.fisrt_name)
               sessionStorage.setItem("last_name" , res.data.user.last_name)
               sessionStorage.setItem("email" , res.data.email)
               sessionStorage.setItem("admin" , res.data.user.is_superuser)

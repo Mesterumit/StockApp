@@ -10,7 +10,7 @@ import {
     InputAdornment,
     IconButton,
   } from "@mui/material";
-  import AuthImage from "../images/Stock-app.avif";
+  import AuthImage from "../images/Stock-app.png";
   import { Field, Form, Formik } from "formik";
   import * as yup from "yup";
   import { useNavigate } from "react-router-dom";

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {  Route, Routes } from "react-router-dom";
 import {
   Brands,
   Categories,
@@ -13,8 +13,10 @@ import {
 } from "./pages";
 import Layout from "./components/Layout/Layout";
 import PrivateRouter from "./PrivateRouter";
+import { geocode } from "./Gecode";
 
 const App = () => {
+  geocode("One Apple Park Way Cupertino CA 95014");
   return (
     
       <Routes>
